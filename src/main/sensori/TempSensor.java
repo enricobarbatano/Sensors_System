@@ -1,4 +1,4 @@
-package sensori;
+package main.sensori;
 
 
 public class TempSensor extends Sensore {
