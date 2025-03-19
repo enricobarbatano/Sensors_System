@@ -1,7 +1,7 @@
 package src.sensori;
-import java.util.logging.Logger;
+
 public class PressureSensor extends Sensore{
-    Logger logger = Logger.getLogger(getClass().getName());
+
     int pressione;
     PressureScale scala;
   public PressureSensor(int ID, int samplingfrequency, boolean isMute, int numberOfInstances, String position, int pressione, PressureScale scala) {

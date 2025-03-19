@@ -1,8 +1,8 @@
 package src.sensori;
-import java.util.logging.Logger;
+
 
 public class TempSensor extends Sensore {
-    Logger logger = Logger.getLogger(getClass().getName());
+
     private int temp;
     private TemperatureScale scale;
 public TempSensor(int ID, int samplingfrequency,boolean isMute,int numberOfInstances,String position,int temp,TemperatureScale scale){
