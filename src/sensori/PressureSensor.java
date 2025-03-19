@@ -4,8 +4,8 @@ public class PressureSensor extends Sensore{
 
     int pressione;
     PressureScale scala;
-  public PressureSensor(int ID, int samplingfrequency, boolean isMute, int numberOfInstances, String position, int pressione, PressureScale scala) {
-        super(ID, samplingfrequency, isMute, numberOfInstances, position);
+  public PressureSensor(int my_ID, int samplingfrequency, boolean isMute, int numberOfInstances, String position, int pressione, PressureScale scala) {
+        super(my_ID, samplingfrequency, isMute, numberOfInstances, position);
         this.pressione=pressione;
         this.scala=scala;
     } 

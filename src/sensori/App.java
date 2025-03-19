@@ -1,7 +1,7 @@
 // Importazione corretta dell'enum annidato temperatureScale dentro la classe TemperatureScale
 package src.sensori;
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         // Creazione corretta dell'istanza dell'enum temperatureScale
         PressureScale ps= PressureScale.ATMOSPHERE;
         TemperatureScale ts = TemperatureScale.CELSIUS;

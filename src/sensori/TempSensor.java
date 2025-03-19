@@ -5,8 +5,8 @@ public class TempSensor extends Sensore {
 
     private int temp;
     private TemperatureScale scale;
-public TempSensor(int ID, int samplingfrequency,boolean isMute,int numberOfInstances,String position,int temp,TemperatureScale scale){
-    super(ID, samplingfrequency, isMute, numberOfInstances,position);
+public TempSensor(int my_ID, int samplingfrequency,boolean isMute,int numberOfInstances,String position,int temp,TemperatureScale scale){
+    super(my_ID, samplingfrequency, isMute, numberOfInstances,position);
          this.temp=temp;
          this.scale=scale;
     }
@@ -49,6 +49,6 @@ public void taraSensore() {
 @Override
 public void stampacaratteristiche() {
 
-    logger.info("id= "+getID()+" samplingfrequency= "+getSamplingfrequency()+" isMute= "+getIsMute()+" number of istances= "+getnumberOfIstances()+" position= "+getPosition()+" Temp= "+getTemp()+" scala= "+ getScale());
+    logger.info("id= "+getMy_ID()+" samplingfrequency= "+getSamplingfrequency()+" isMute= "+getIsMute()+" number of istances= "+getnumberOfIstances()+" position= "+getPosition()+" Temp= "+getTemp()+" scala= "+ getScale());
 }
 }
