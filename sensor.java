@@ -1,7 +1,7 @@
 
 
 public class sensor {
-   public static void main(argv[] Strings){
+   public static void main(Strings[] args){
     
 
 
