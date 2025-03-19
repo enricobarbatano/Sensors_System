@@ -1,4 +1,4 @@
-package sensori;
+package src.sensori;
 
 public interface Misurazione {
   

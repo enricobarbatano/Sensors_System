@@ -1,7 +1,8 @@
-package sensori;
-
+package src.sensori;
+import java.util.logging.Logger;
 
 public class TempSensor extends Sensore {
+    Logger logger = Logger.getLogger(getClass().getName());
     private int temp;
     private TemperatureScale scale;
 public TempSensor(int ID, int samplingfrequency,boolean isMute,int numberOfInstances,String position,int temp,TemperatureScale scale){
@@ -25,29 +26,29 @@ public void setScale( TemperatureScale scale){
 public void accendiSensore() {
     
     this.isMute=false;
-    System.out.println("sensore di temperatura attivato ");
+    logger.info("sensore di temperatura attivato ");
 }
 @Override
 public void spegniSensore() {
     
     this.isMute=true;
-    System.out.println("sensore di temperatura spento ");
+    logger.info("sensore di temperatura spento ");
 }
 @Override
 public void effettuaMisurazione(){
-    System.out.println("temperatura in "+getScale()+" :");
+    logger.info("temperatura in "+getScale()+" :");
     int misura=scanner.nextInt();
     this.temp=misura;
-    System.out.println("il sensore di temperatura ha misurato il seguente valore: "+getTemp()+ " gradi "+ getScale());
+    logger.info("il sensore di temperatura ha misurato il seguente valore: "+getTemp()+ " gradi "+ getScale());
 }
 @Override
 public void taraSensore() {
 
-    System.out.println("sensore di temperatura tarato ");   
+    logger.info("sensore di temperatura tarato ");
 }
 @Override
 public void stampacaratteristiche() {
-    
-    System.out.println("id= "+getID()+" samplingfrequency= "+getSamplingfrequency()+" isMute= "+getIsMute()+" number of istances= "+getnumberOfIstances()+" position= "+getPosition()+" Temp= "+getTemp()+" scala= "+ getScale());
+
+    logger.info("id= "+getID()+" samplingfrequency= "+getSamplingfrequency()+" isMute= "+getIsMute()+" number of istances= "+getnumberOfIstances()+" position= "+getPosition()+" Temp= "+getTemp()+" scala= "+ getScale());
 }
 }

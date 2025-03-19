@@ -1,8 +1,9 @@
-package sensori;
+package src.sensori;
 import java.util.Scanner;
+import java.util.logging.Logger;
 public class Sensore implements Misurazione{
     Scanner scanner= new Scanner(System.in);
-    int x;
+    Logger logger = Logger.getLogger(getClass().getName());
     private int ID;
     public int samplingfrequency =5000;
     public boolean isMute;
@@ -27,7 +28,7 @@ public boolean getIsMute(){
     return this.isMute;
 }
 public int getnumberOfIstances(){
-    return this.numberOfInstances;
+    return numberOfInstances;
 }
 public String getPosition(){
     return this.position;
@@ -43,18 +44,18 @@ public void setsamplingFrequency(int samplingfrequency){
 public void accendiSensore() {
 
     this.isMute=false;
-    System.out.println("sensore attivato ");
+    logger.info("sensore attivato ");
 }
 @Override
 public void effettuaMisurazione() {
-    System.out.println("misura = ");
+    logger.info("misura = ");
     int misura=scanner.nextInt();
     
 }
 @Override
 public void spegniSensore() {
-  this.isMute=true;  
-  System.out.println("sensore attivato ");
+  this.isMute=true;
+    logger.info("sensore attivato ");
 }
 @Override
 public void taraSensore() {
@@ -65,6 +66,6 @@ public void setPosition(String position){
 }
 public void stampacaratteristiche(){
 
-    System.out.println("id= "+getID()+" samplingfrequency= "+getSamplingfrequency()+" isMute= "+getIsMute()+" number of istances= "+getnumberOfIstances()+" position= "+getPosition());
+    logger.info("id= "+getID()+" samplingfrequency= "+getSamplingfrequency()+" isMute= "+getIsMute()+" number of istances= "+getnumberOfIstances()+" position= "+getPosition());
 }
 }
