@@ -22,10 +22,15 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Build project
-        run: mvn clean verify  # Usa il comando corretto per il tuo progetto
-
+      - name: Compile Java files
+        run: |
+          mkdir -p bin
+          javac -d bin $(find . -name "*.java")
+          
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.java.binaries=bin
