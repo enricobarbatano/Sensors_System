@@ -23,10 +23,10 @@ jobs:
           java-version: '17'
 
       - name: Compile Java files
-        shell: pwsh
         run: |
           if (-Not (Test-Path bin)) { New-Item -ItemType Directory -Path bin }
-          Get-ChildItem -Path . -Recurse -Filter "*.java" | ForEach-Object { javac -d bin $_.FullName }
+          javac -d bin $(Get-ChildItem -Path src/sensori -Recurse -Filter "*.java")
+        shell: pwsh
 
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5
