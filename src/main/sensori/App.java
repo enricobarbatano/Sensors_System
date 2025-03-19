@@ -1,5 +1,5 @@
 // Importazione corretta dell'enum annidato temperatureScale dentro la classe TemperatureScale
-package sensori;
+package main.sensori;
 public class App {
     public static void main(String[] args) {
         // Creazione corretta dell'istanza dell'enum temperatureScale
