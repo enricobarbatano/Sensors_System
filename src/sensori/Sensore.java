@@ -1,4 +1,4 @@
-package src.sensori;
+package sensori;
 import java.util.Scanner;
 import java.util.logging.Logger;
 public class Sensore implements Misurazione{
