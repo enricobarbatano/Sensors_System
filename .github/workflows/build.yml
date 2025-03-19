@@ -5,14 +5,26 @@ on:
       - master
   pull_request:
     types: [opened, synchronize, reopened]
+
 jobs:
   sonarqube:
     name: SonarQube
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Build project
+        run: mvn clean verify  # Usa il comando corretto per il tuo progetto
+
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5
         env:
