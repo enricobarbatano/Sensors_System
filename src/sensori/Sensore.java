@@ -34,7 +34,7 @@ public String getPosition(){
     return this.position;
 }
 //metodi set della classe sensore
-public void setMy_ID(int ID){
+public void setMy_ID(int my_ID){
     this.my_ID=my_ID;
 }
 public void setsamplingFrequency(int samplingfrequency){
