@@ -5,7 +5,7 @@ public class Sensore implements Misurazione{
     Scanner scanner= new Scanner(System.in);
     Logger logger = Logger.getLogger(getClass().getName());
     private int ID;
-    public int samplingfrequency =5000;
+    public int samplingfrequency ;
     public boolean isMute;
     static int numberOfInstances;
     public String position;
