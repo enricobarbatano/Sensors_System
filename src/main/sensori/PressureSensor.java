@@ -1,4 +1,4 @@
-package sensori;
+package main.sensori;
 
 public class PressureSensor extends Sensore{
 
@@ -21,9 +21,10 @@ public void setPressureScale(PressureScale scala){
 @Override
 public void accendiSensore() {
    
-    super.accendiSensore();
+    this.isMute=false;
     logger.info("sensore di pressione attivato ");
 }
+
 @Override
 public void effettuaMisurazione() {
     logger.info("pressione in "+getScala()+" :");
