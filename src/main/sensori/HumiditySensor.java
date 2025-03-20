@@ -23,7 +23,7 @@ public void accendiSensore() {
 }
 @Override
 public void effettuaMisurazione() {
-    logger.info("pressione in "+getHumidityScale()+" :");
+    logger.info("umidità in "+getHumidityScale()+" :");
     int misura=scanner.nextInt();
     this.humidity=misura;
     logger.info("la nuova umidità misurata è di :"+ getHumidity()+ " "+getHumidityScale());
